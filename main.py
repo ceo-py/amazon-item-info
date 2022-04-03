@@ -26,7 +26,7 @@ class ItemInformation:
 
     def find_item_information(self):
         for info in ItemInformation.get_info_dic:
-            if info != "TITLE":
+            if "PICTURE" != info != "TITLE":
                 try:
                     ItemInformation.add_info[info] = (
                         driver_.html.xpath(ItemInformation.get_info_dic[info], first=True)).text.replace('"', "")
